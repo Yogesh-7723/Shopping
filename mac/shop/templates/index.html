@@ -1,0 +1,58 @@
+{% load static %}
+<html>
+    <head>
+        <title>Digital Locker</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <style>
+    
+            *
+            {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                
+            }
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <header class="bg-yellow-400 h-16 relative">
+            <h1 class='text-5xl text-blue-900 float-left m-2'>Product Management Plateform</h1>
+            <nav class=" absolute right-0 mt-6">
+                <ul class="flex p-3 text-xl ">
+                    <li class="mx-16"><a href="">Home</a></li>
+                    <li class="mx-16"><a href="ProductView/">Product</a></li>
+                    <li class="mx-16"><a href="#">Menu</a></li>
+                    <li class="mx-16"><a href="#">Ragister</a></li>
+                </ul>
+            </nav>
+        </header>
+        <br>
+        <table border='2px' callspadding='2' width='100%' class='text-center ' >
+            
+            <tr>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Sub-Category</th>
+                <th>Price</th>
+                <th>Desc</th>
+                <th>pub_date</th>
+                <th>Image</th>
+            </tr>
+            {% for i in obj %}
+            <tr>
+                <td>{{i.product_name}}</td>
+                <td>{{i.category}}</td>
+                <td>{{i.subcategory}}</td>
+                <td>{{i.price}}</td>
+                <td>{{i.desc}}</td>
+                <td>{{i.pub_date}}</td>
+                <td><img src="{{i.image.url}}" alt='' ></td>
+            </tr>
+            {% endfor %}
+    </body>
+</html>

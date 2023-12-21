@@ -1,0 +1,36 @@
+{% load static %}
+<html>
+    <head>
+        <title>Digital Locker</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <style>
+    
+            *
+            {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                
+            }
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <header class="bg-yellow-400 h-16 relative">
+            <nav class=" absolute right-0  my-4">
+                <ul class="flex p-3 text-xl">
+                    <li class="mx-16"><a href="#">Home</a></li>
+                    <li class="mx-16"><a href="#">Product</a></li>
+                    <li class="mx-16"><a href="#">Menu</a></li>
+                    <li class="mx-16"><a href="#">Ragister</a></li>
+                </ul>
+            </nav>
+        </header>
+        <br>
+        <a href="{% static 'blog\image\front.png' %}" class='bg-orange-400 mx-64 text-xl rounded-xl p-1'>Show image</a>
+    </body>
+</html>
